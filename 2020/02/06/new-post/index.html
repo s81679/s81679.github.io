@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="GiGi">
   <meta name="keywords" content="">
-  <title>如何更換主題 ~ 來點鳥</title>
+  <title>Hexo的基本設定與發布規則 ~ 來點鳥</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -101,7 +101,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/img/post_banner.jpg')no-repeat center center;
+         style="background: url('/img/pic-01.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -116,7 +116,7 @@
               
                 <p class="mt-3">
                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  星期日, 二月 9日 2020, 3:13 凌晨
+                  星期四, 二月 6日 2020, 10:15 晚上
                 </p>
               
 
@@ -125,7 +125,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    34 字
+                    978 字
                   </span>&nbsp;
                 
 
@@ -133,7 +133,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      1 分鐘
+                      3 分鐘
                   </span>&nbsp;
                 
 
@@ -166,9 +166,60 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <p>Hexo官方的主題樣板<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-<p>本次選用的主題<br><a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener">一款 Material Design 風格的 Hexo 主题</a></p>
-<p>明天繼續奮戰…</p>
+            <p>關於 Hexo 與 Github 的相關介紹與安裝步驟，可以看看這幾篇文章。</p>
+<ol>
+<li><a href="https://yaoandy107.github.io/hexo-tutorial/" target="_blank" rel="noopener">Hexo+GitHub，新手也可以快速建立部落格</a></li>
+<li><a href="https://magicdogguo.github.io/2019/01/19/%E6%9E%B6%E8%A8%ADHexo%E7%B6%B2%E7%AB%99%E8%8D%89%E7%A8%BF/" target="_blank" rel="noopener">第一次架設Hexo網站 - MD工坊</a></li>
+</ol>
+<h2 id="開始吧！"><a href="#開始吧！" class="headerlink" title="開始吧！"></a>開始吧！</h2><h3 id="終端機"><a href="#終端機" class="headerlink" title="終端機"></a>終端機</h3><p>首先要知道<strong>終端機</strong>是什麼（本人第一次用MAC裝東西，平常工作都是用PC…）<br>看了教學才知道，原來MAC要安裝軟體基本上都要開終端機！震驚全球十億人！（只有你<br>終端機就是這個東西，類似Windows的命令提示字元。</p>
+<p><img src="/img/article/01/cmd.png" srcset="/img/loading.gif" alt=""></p>
+<p>一開始看到它的時候很害怕，因為本身是設計師，平常不會有機會開到它。<br>除非是電腦突然怎麼了不動了，只好低著頭去求求工程師大大…（跪</p>
+<h3 id="安裝步驟"><a href="#安裝步驟" class="headerlink" title="安裝步驟"></a>安裝步驟</h3><p>安裝 Hexo 的所有步驟都必須使用終端機。<br>按照文章的步驟，安裝好以下軟體，並且用終端機設定完成：</p>
+<ol>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+<li><a href="https://apps.apple.com/tw/app/xcode/id497799835?mt=12" target="_blank" rel="noopener">Xcode</a> 或 <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>（個人使用這個）</li>
+<li>申請一個 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> 帳號</li>
+</ol>
+<h3 id="擴充套件"><a href="#擴充套件" class="headerlink" title="擴充套件"></a>擴充套件</h3><p>因為筆者平時習慣用 vs code，所以這篇僅介紹如何使用 vs code 的 Hexo 擴充套件來製作部落格。<br>上述軟體都安裝成功，並且也將 Hexo 配置到 GitHub 後，<br>接著開啟 vs code 的擴充應用程式，下載 <strong>vscode-hexo</strong> 擴充套件。</p>
+<p><img src="/img/article/01/vscode-hexo.png" srcset="/img/loading.gif" alt=""></p>
+<p>這個擴充套件有教學，會教你一些 Hexo 的指令和快捷鍵。</p>
+<p><img src="/img/article/01/hexo-info.jpeg" srcset="/img/loading.gif" alt=""></p>
+<p>以下簡單介紹一下：</p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>首先，從 <strong>檔案</strong> 開啟你的 Hexo blog 資料夾。<br>可以把資料夾設一個替身到桌面，比較快找到。（對，我就是那個找不到的人…</p>
+<p>請記得，要對 Hexo 下任何指令前都需要按下 <strong>Ctrl+Shift+P</strong> 或是 <strong>Command+Shift+P</strong><br>再接下去打相關指令。</p>
+<p>指令整理如下：</p>
+<h3 id="初始化網站"><a href="#初始化網站" class="headerlink" title="初始化網站"></a>初始化網站</h3><pre><code class="bash">hexo init</code></pre>
+<p>如果你編輯到一半發現你的部落格壞掉了！可以將整個網站初始化還原。<br>不過別忘了先把你打好的文章備份起來喔！</p>
+<p>路徑位置：source &gt; _posts &gt; .md檔案</p>
+<h3 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h3><pre><code class="bash">hexo new</code></pre>
+<p>輸入指令後按下 Enter，就可以命名你的文章 title（也就是你的檔名，本篇以 <strong>New-post</strong> 為例 ）<br>你的文章檔名就會叫做 <strong>New-post.md</strong> 。</p>
+<p>請以 <strong>英文命名</strong> 為主，中文在網頁顯示時有可能會出現亂碼。<br>新增成功後，就會跳到熱騰騰的文章編輯頁面：</p>
+<pre><code class="bash">---
+title: 標題
+date: 2020-02-14 01:15:26
+tags:
+---
+第一篇文章</code></pre>
+<h3 id="發布文章"><a href="#發布文章" class="headerlink" title="發布文章"></a>發布文章</h3><pre><code class="bash">hexo deploy , 按 Enter 後輸入 -g</code></pre>
+<p>文章打好後，記得按下儲存。<br>接著就可以準備發佈到部落格上囉！</p>
+<p><strong>deploy</strong> 是部署，<strong>generate</strong> 是生成（靜態檔案）<br>發佈完成，等一段時間（通常是五分鐘），再將部落格重新整理，就可以看到新文章囉！</p>
+<h3 id="在本機預覽"><a href="#在本機預覽" class="headerlink" title="在本機預覽"></a>在本機預覽</h3><pre><code class="bash">hexo server</code></pre>
+<p>如果想先在本機（本地端）看看文章的效果，可以輸入此指令。<br>Hexo 會生成一個 <strong>localhost:4000</strong> 的網址（本機伺服器）給你預覽線上的樣子。</p>
+<p>在確認發佈前，記得輸入 Ctrl+C 或是以下指令來關閉伺服器喔！</p>
+<pre><code class="bash">hexo stop</code></pre>
+<h3 id="清除快取"><a href="#清除快取" class="headerlink" title="清除快取"></a>清除快取</h3><pre><code class="bash">hexo clean</code></pre>
+<p>如果有刪除文章，或是做了很多事情（？<br>可以輸入指令來清除快取檔案和已產生的靜態檔案，簡單來說就是清理一下看不見的垃圾。</p>
+<h2 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h2><p>很久以前有接觸過 Markdown（無名小站時期）<br>當時覺得很好玩，打一些簡單的符號，文字的樣式就變了！但是現在也差不多忘光光了！<br>以下推薦幾篇 Markdown 教學，不熟悉語法的朋友可以研究看看。</p>
+<ol>
+<li><a href="https://wastemobile.gitbooks.io/gitbook-chinese/content/format/markdown.html" target="_blank" rel="noopener">Markdown 語法教學</a></li>
+<li><a href="https://tiida54.github.io/2018/01/03/3%E5%88%86%E9%90%98%E5%AD%B8%E6%9C%83Markdown%E5%B8%B8%E7%94%A8%E8%AA%9E%E6%B3%95/" target="_blank" rel="noopener">3分鐘學會Markdown常用語法</a></li>
+</ol>
+<h4 id="Markdown-編輯器-HackMD"><a href="#Markdown-編輯器-HackMD" class="headerlink" title="Markdown 編輯器 HackMD"></a>Markdown 編輯器 HackMD</h4><p>以下兩篇文章筆者尚未研究，先收藏起來。</p>
+<ol>
+<li><a href="https://hackmd.io/BVqowKshRH246Q7UDyodFA" target="_blank" rel="noopener">MarkDown 語法大全 - HackMD</a></li>
+<li><a href="https://hackmd.io/s/quick-start-tw" target="_blank" rel="noopener">HackMD 快速入門教學</a></li>
+</ol>
 
             <hr>
           </div>
@@ -176,15 +227,6 @@
           <div>
             <p>
             
-            
-              <span>
-                <i class="iconfont icon-tag"></i>
-                
-                  <a class="hover-with-bg" href="/tags/Hexo">Hexo</a>
-                
-                  <a class="hover-with-bg" href="/tags/Fluid">Fluid</a>
-                
-              </span>
             
             </p>
             
@@ -341,7 +383,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "如何更換主題&nbsp;",
+        "Hexo的基本設定與發布規則&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
