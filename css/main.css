@@ -450,7 +450,6 @@ a.police-beian img {
   word-break: break-word;
   line-height: 1.6;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
