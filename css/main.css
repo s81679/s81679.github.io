@@ -54,6 +54,9 @@ body a:hover {
 #local-search-result .search-list-content {
   padding: 0 1.25rem;
 }
+.markdown-body p {
+  line-height: 1.8!important;
+}
 .markdown-body hr {
   height: 0.2em;
   margin: 2rem 0;
