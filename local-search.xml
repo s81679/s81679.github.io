@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Hexo Fluid 主題使用指南</title>
+    <link href="/2020/02/25/hexo-theme-fluid/"/>
+    <url>/2020/02/25/hexo-theme-fluid/</url>
+    
+    <content type="html"><![CDATA[<p>用了 Fluid 主題一小段時間，也漸漸開始熟悉一些基本功能和樣式可以如何調整。<br>剛開始真的是混亂中立，什麼都想改但什麼都改不到！</p><p>不得不說，筆者身為設計師，<br>在打文章的同時能挑選一張美美的 banner 來搭配主題，真的好幸福啊！</p><p>接著會繼續補完：）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blog</category>
+      
+      <category>主題</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Fluid</tag>
+      
+      <tag>theme</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何安裝 Disqus 留言板</title>
     <link href="/2020/02/21/install-disqus/"/>
     <url>/2020/02/21/install-disqus/</url>
@@ -40,6 +71,8 @@
       
       <category>Blog</category>
       
+      <category>主題</category>
+      
     </categories>
     
     
@@ -56,7 +89,7 @@
   
   
   <entry>
-    <title>Hexo的基本設定與發布規則</title>
+    <title>Hexo 的基本設定與發布規則</title>
     <link href="/2020/02/06/new-post/"/>
     <url>/2020/02/06/new-post/</url>
     
