@@ -131,7 +131,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    99 字
+                    1.1k 字
                   </span>&nbsp;
                 
 
@@ -139,7 +139,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      1 分鐘
+                      4 分鐘
                   </span>&nbsp;
                 
 
@@ -174,8 +174,49 @@
           <div class="markdown-body">
             <p>用了 Fluid 主題一小段時間，也漸漸開始熟悉一些基本功能和樣式可以如何調整。<br>剛開始真的是混亂中立，什麼都想改但什麼都改不到！</p>
 <p>不得不說，筆者身為設計師，<br>在打文章的同時能挑選一張美美的 banner 來搭配主題，真的好幸福啊！</p>
-<p>接著會繼續補完：）</p>
+<h2 id="Fluid-主題介紹"><a href="#Fluid-主題介紹" class="headerlink" title="Fluid 主題介紹"></a>Fluid 主題介紹</h2><p>Fluid 是一款基於 Hexo 框架上開發的 Material Design 風格主题，由 <a href="https://github.com/fluid-dev" target="_blank" rel="noopener">Fluid-dev</a> 負責開發與維護。<br>主题 GitHub：<a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener">https://github.com/fluid-dev/hexo-theme-fluid</a><br>相關文檔：<a href="https://fluid-dev.github.io/hexo-fluid-docs/" target="_blank" rel="noopener">用戶手冊</a>、<a href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/Changelog.md" target="_blank" rel="noopener">更新日誌</a>、<a href="https://hexo.io/zh-cn/docs/front-matter" target="_blank" rel="noopener">文章配置</a><br>範例網站：<br><a href="https://rook1e.com/" target="_blank" rel="noopener">Rook1e’s blog</a><br><a href="https://zkqiang.cn/" target="_blank" rel="noopener">zkqiang’s blog</a><br><a href="https://eatrice.top/" target="_blank" rel="noopener">吃白饭的休伯利安号</a></p>
+<h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><p>關於主題配置，官方有提供一個詳細的 <a href="https://fluid-dev.github.io/hexo-fluid-docs/guide/" target="_blank" rel="noopener">Hexo Fluid 使用指南</a> 。<br>裡面介紹的很詳細，網址也放在主題包的 <strong>_config.yml</strong> 檔案內。<br>有興趣的朋友可以研究看看，本篇僅介紹筆者至今為止調整過的一些基本項目，與修改的方法。</p>
+<h3 id="主頁-Banner-大圖"><a href="#主頁-Banner-大圖" class="headerlink" title="主頁 Banner 大圖"></a>主頁 Banner 大圖</h3><p>所有的頁面（含首頁、關於頁、文章頁…等），都有個 <strong>banner_img</strong> 的屬性，在 Fluid 的 <strong>_config.yml</strong> 配置檔案內設定。<br>以首頁為例，請到 <strong>_config.yml</strong> 檔案內，找到以下程式碼：</p>
+<pre><code class="bash">#---------------------------
+# 首页
+# Index Page
+#---------------------------
+index:
+  banner_img: /img/banner.jpg  # 首页 Banner 头图，以下相同
+  banner_img_height: 100  # 头图高度，屏幕百分比，available: 0 - 100</code></pre>
+<p>banner 的路徑（banner_img）和高度（banner_img_height）就在這邊設置。</p>
+<h4 id="圖片來源"><a href="#圖片來源" class="headerlink" title="圖片來源"></a>圖片來源</h4><p>建議將圖片放置在 <strong>/fluid/source/img/</strong> 目錄底下，對應的路徑填寫為：<strong>/img/你的圖片名稱</strong>。</p>
+<h4 id="例如"><a href="#例如" class="headerlink" title="例如"></a>例如</h4><p>首頁的圖片是 <strong>banner.jpg</strong>，圖片應存放在：<strong>/fluid/source/img/banner.jpg</strong>，<br>banner_img 的指定路徑為：<strong>/img/banner.jpg</strong>。</p>
+<p>同理，其他的頁面也是如此設置，如：文章頁、關於我、分類頁、標籤頁等。</p>
+<pre><code class="bash">#---------------------------
+# 文章頁
+# Archive Page
+#---------------------------
+archive:
+  banner_img: /img/articles.jpg
+  banner_img_height: 80  # available: 0 - 100
 
+#---------------------------
+# 分類頁
+# Categories Page
+#---------------------------
+category:
+  banner_img: /img/categories.jpg
+  banner_img_height: 80  # available: 0 - 100</code></pre>
+<p>一開始筆者會把 public/img 和 Fluid 主題包內的 source/img 混淆，不知道圖片正確應該放置到哪邊？<br>官方說建議放到 source/img，但筆者直接把圖片存到 public/img 卻也能正常顯示。<br>且放到 source/img 內的圖片，上傳到部落格後，便會發現 public/img 內也同步產生了那張圖片。</p>
+<p>於是筆者查了一下<a href="https://hexo.io/zh-tw/docs/themes.html#languages" target="_blank" rel="noopener">官方的主題配置文檔</a>，官方對 source 的解釋如下：</p>
+<h4 id="source"><a href="#source" class="headerlink" title="source"></a>source</h4><p>原始檔案資料夾，除了模板以外的 Asset，例如 CSS、JavaScript 檔案等，應該放在這個資料夾。檔案或資料夾開頭名稱為 _（底線）或隱藏檔案會被忽略。</p>
+<p>如果檔案可以被渲染的話，會經過處理再儲存到 public 資料夾，否則會直接拷貝到 public 資料夾。</p>
+<p>以上說明筆者理解為：<strong>「你存在 source/img 內的圖片，會被直接拷貝到 public/img。」</strong></p>
+<p>於是後來寫文章時，筆者都直接把圖片存在 public/img 內了。雖然不確定這樣存圖片會不會有問題，不過到目前為止都沒有什麼問題產生。（自以為這樣檔案會比較小的設計師…(´・ω・`)</p>
+<h3 id="於是就發生了悲劇"><a href="#於是就發生了悲劇" class="headerlink" title="於是就發生了悲劇"></a>於是就發生了悲劇</h3><p>沒錯，就在剛剛，筆者才剛寫完上面的介紹，發現電腦好當啊！網站怎麼跑得這麼慢！<br>就想起了 Hexo 有一個清除快取的功能，很開心的按下去之後，發現整個網站的圖片都消失了！！<br>筆者整個 public 資料夾都不見了啊啊啊啊！！！！（崩潰</p>
+<p>不知道是不是因為筆者在開啟 server 的狀態下按了 Hexo clean 的關係，整個 public 都被刪除了。<br>嚇得平常不動腦的筆者光速的動起了腦袋，趕快先到 Github 把線上還沒壞掉的檔案下載下來，再自己創建一個 public 資料夾，把載下來的檔案都丟進去，網站圖片才回來了…真是嚇死了(´; ω ;`)</p>
+<p>於是驚魂未定的筆者得出了以下結論：</p>
+<ol>
+<li>千萬別在開啟 server 的狀態下按 Hexo clean，Hexo 會把整個 public 資料夾當作已產生的靜態檔案給清除。</li>
+<li>網站的所有圖片（ 大圖 banner、文章的 banner、文章內的說明圖、和主題有關的原始檔案如：favicon.png、loading.gif…等），皆須存在 <strong>fluid/source/img/</strong> 內。 public 資料夾僅是</li>
+</ol>
+<h3 id="部落格標題與-header-選單"><a href="#部落格標題與-header-選單" class="headerlink" title="部落格標題與 header 選單"></a>部落格標題與 header 選單</h3>
             <hr>
           </div>
           <br>
