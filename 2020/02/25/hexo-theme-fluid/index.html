@@ -209,14 +209,15 @@ category:
 <p>如果檔案可以被渲染的話，會經過處理再儲存到 public 資料夾，否則會直接拷貝到 public 資料夾。</p>
 <p>以上說明筆者理解為：<strong>「你存在 source/img 內的圖片，會被直接拷貝到 public/img。」</strong></p>
 <p>於是後來寫文章時，筆者都直接把圖片存在 public/img 內了。雖然不確定這樣存圖片會不會有問題，不過到目前為止都沒有什麼問題產生。（自以為這樣檔案會比較小的設計師…(´・ω・`)</p>
-<h3 id="於是就發生了悲劇"><a href="#於是就發生了悲劇" class="headerlink" title="於是就發生了悲劇"></a>於是就發生了悲劇</h3><p>沒錯，就在剛剛，筆者才剛寫完上面的介紹，發現電腦好當啊！網站怎麼跑得這麼慢！<br>就想起了 Hexo 有一個清除快取的功能，很開心的按下去之後，發現整個網站的圖片都消失了！！<br>筆者整個 public 資料夾都不見了啊啊啊啊！！！！（崩潰</p>
+<h3 id="於是就發生了悲劇"><a href="#於是就發生了悲劇" class="headerlink" title="於是就發生了悲劇"></a>於是就發生了悲劇</h3><p>沒錯，就在剛剛，筆者才剛寫完上面的介紹，發現電腦好當啊！網站怎麼跑得這麼慢！<br>就想起了 Hexo 有一個清除快取的功能，很開心的按下去之後，發現整個網站的圖片都消失了！！<br><strong>筆者整個 public 資料夾都不見了啊啊啊啊！！！！（崩潰</strong></p>
 <p>不知道是不是因為筆者在開啟 server 的狀態下按了 Hexo clean 的關係，整個 public 都被刪除了。<br>嚇得平常不動腦的筆者光速的動起了腦袋，趕快先到 Github 把線上還沒壞掉的檔案下載下來，再自己創建一個 public 資料夾，把載下來的檔案都丟進去，網站圖片才回來了…真是嚇死了(´; ω ;`)</p>
 <p>於是驚魂未定的筆者得出了以下結論：</p>
 <ol>
 <li>千萬別在開啟 server 的狀態下按 Hexo clean，Hexo 會把整個 public 資料夾當作已產生的靜態檔案給清除。</li>
-<li>網站的所有圖片（ 大圖 banner、文章的 banner、文章內的說明圖、和主題有關的原始檔案如：favicon.png、loading.gif…等），皆須存在 <strong>fluid/source/img/</strong> 內。 public 資料夾僅是</li>
+<li>網站的所有圖片（ 大圖 banner、文章的 banner、文章內的說明圖、和主題有關的原始檔案如：favicon.png、loading.gif…等），皆須存在 <strong>fluid/source/img/</strong> 內， public 資料夾僅是上傳到線上部落格後會產生的靜態檔案。</li>
 </ol>
-<h3 id="部落格標題與-header-選單"><a href="#部落格標題與-header-選單" class="headerlink" title="部落格標題與 header 選單"></a>部落格標題與 header 選單</h3>
+<h3 id="部落格標題與-header-選單"><a href="#部落格標題與-header-選單" class="headerlink" title="部落格標題與 header 選單"></a>部落格標題與 header 選單</h3><p><img src="/img/banner-2.jpg" srcset="/img/loading.gif" alt=""></p>
+
             <hr>
           </div>
           <br>
