@@ -205,8 +205,9 @@ category:
   banner_img_height: 80  # available: 0 - 100</code></pre>
 <p>一開始筆者會把 public/img 和 Fluid 主題包內的 source/img 混淆，不知道圖片正確應該放置到哪邊？<br>官方說建議放到 source/img，但筆者直接把圖片存到 public/img 卻也能正常顯示。<br>且放到 source/img 內的圖片，上傳到部落格後，便會發現 public/img 內也同步產生了那張圖片。</p>
 <p>於是筆者查了一下<a href="https://hexo.io/zh-tw/docs/themes.html#languages" target="_blank" rel="noopener">官方的主題配置文檔</a>，官方對 source 的解釋如下：</p>
-<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>原始檔案資料夾，除了模板以外的 Asset，例如 CSS、JavaScript 檔案等，應該放在這個資料夾。檔案或資料夾開頭名稱為 _（底線）或隱藏檔案會被忽略。</p>
-<p>如果檔案可以被渲染的話，會經過處理再儲存到 public 資料夾，否則會直接拷貝到 public 資料夾。</p>
+<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><blockquote>
+<p>原始檔案資料夾，除了模板以外的 Asset，例如 CSS、JavaScript 檔案等，應該放在這個資料夾。檔案或資料夾開頭名稱為 _（底線）或隱藏檔案會被忽略。<br>如果檔案可以被渲染的話，會經過處理再儲存到 public 資料夾，否則會直接拷貝到 public 資料夾。</p>
+</blockquote>
 <p>以上說明筆者理解為：<strong>「你存在 source/img 內的圖片，會被直接拷貝到 public/img。」</strong></p>
 <p>於是後來寫文章時，筆者都直接把圖片存在 public/img 內了。雖然不確定這樣存圖片會不會有問題，不過到目前為止都沒有什麼問題產生。（自以為這樣檔案會比較小的設計師…(´・ω・`)</p>
 <h3 id="於是就發生了悲劇"><a href="#於是就發生了悲劇" class="headerlink" title="於是就發生了悲劇"></a>於是就發生了悲劇</h3><p>沒錯，就在剛剛，筆者才剛寫完上面的介紹，發現電腦好當啊！網站怎麼跑得這麼慢！<br>就想起了 Hexo 有一個清除快取的功能，很開心的按下去之後，發現整個網站的圖片都消失了！！<br><strong>筆者整個 public 資料夾都不見了啊啊啊啊！！！！（崩潰</strong></p>
