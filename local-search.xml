@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>如何使用 SourceTree 做版本控制（上）</title>
+    <link href="/2020/04/09/start-sourcetree/"/>
+    <url>/2020/04/09/start-sourcetree/</url>
+    
+    <content type="html"><![CDATA[<p>在開始介紹 SourceTree 的基本操作之前，先來說說一些 Git 的小觀念。<br>筆者花了好多時間理解（真心佩服全天底下的工程師們！）</p><h2 id="什麼是-Git？"><a href="#什麼是-Git？" class="headerlink" title="什麼是 Git？"></a>什麼是 Git？</h2><p><strong>Git 是一套版本控制系統</strong>，使用 Git 來進行專案的版本控制或多人的團隊合作，是開發過程中不可或缺的強力工具。</p><p>身為設計師的筆者，其實看了很多資料跟指令還是一頭霧水，要做什麼的版本控制？設計師需要版本控制嗎？我們不就是一直瘋狂 Ctrl+C、Ctrl+V 再搭配 N 個超大容量的硬碟，就足以掌控我們的檔案了嗎？（現實生活絕對掌控不了）</p><p>直到筆者看到了這篇文章，喔喔！真心推薦剛接觸 Git 的朋友先去看看：</p><h3 id="什麼是-Git？為什麼要學習它？"><a href="#什麼是-Git？為什麼要學習它？" class="headerlink" title="什麼是 Git？為什麼要學習它？"></a><a href="https://gitbook.tw/chapters/introduction/what-is-git.html" target="_blank" rel="noopener">什麼是 Git？為什麼要學習它？</a></h3><blockquote><p>簡單的說，Git 就像玩遊戲的時候可以儲存進度一樣。<br>為了避免打頭目輸了而損失裝備，又或是打倒頭目卻沒有掉落期望的珍貴裝備，你也許在每次要去打頭目之前記錄一下，在發生狀況的時候可以載入舊進度，再來挑戰一次。</p></blockquote><p>看到這段簡直是醍醐灌頂！！</p><p>對！沒錯！設計師應該都會有個永遠也無法完稿的檔案吧。（被客戶被老闆瘋狂修改到第 N 個版本）<br>它的命名就會產生了以下變化：</p><ol><li>name-完稿.psd</li><li>name-最終完稿.psd</li><li>name-最終最終完稿.psd</li><li>name-最終 BOSS 大魔王完稿.psd</li><li>name-你才完稿你全家都完稿.psd</li></ol><p>扯遠了！簡單來說，<strong>Git 可以控制、保存你手上所有專案修改過的版本</strong>，做一個紀錄和保留，若不小心刪除了某一份檔案，也可以馬上救回來。多人共同開發一個專案時，也可以清楚看到誰做了什麼事，修改了哪個部分。不慎出錯了就可以一群人磨刀霍霍請他喝杯咖啡（？</p><p>但是 Git 對於剛準備要入門前端的設計師來說，還是有些複雜艱深，需要記住的指令太多，於是本篇主要介紹以 Git 為基礎誕生的 <strong>SourceTree 圖形化工具</strong>。</p><h2 id="SourceTree"><a href="#SourceTree" class="headerlink" title="SourceTree"></a>SourceTree</h2><p><strong>SourceTree 是一款以 Git 為基礎設計的 GUI 圖形化工具</strong>（GUI，全名：Graphical User Interface，中文：圖形使用者介面），關於 GUI 的詳細解釋可以看看<a href="http://terms.naer.edu.tw/detail/1678811/" target="_blank" rel="noopener">這篇文章</a>。</p><p>簡單來說，它就是 <strong>Git 的 UI 介面</strong>，將複雜且無形的指令，轉為有型的視覺化圖形。它是個很棒的輔助工具，讓使用者可以透過<strong>視覺化的介面</strong>，更好的使用 Git 做版本控制。<br>接下來將會以詳細的圖文教學，如何使用 GitHub + SourceTree 做一個專案的版本控制，有興趣的朋友請接著看下去。</p><h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>首先請到 SourceTree 的官網<a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">載點</a>，下載並安裝。<br>接著我們會利用 GitHub 創立一個新的專案，才能使用這個專案做版本控制：</p><h2 id="新增專案"><a href="#新增專案" class="headerlink" title="新增專案"></a>新增專案</h2><p>請先開啟 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> 並登入您的帳戶，按下右上角的<strong>「＋」</strong>，選擇 <strong>New repository</strong>（新增資料庫）</p><p><img src="/img/article/20200412/new-repository.jpg" srcset="/img/loading.gif" alt=""></p><p>接著在 Repository name 取個專案名字（本篇使用 hello-world），下方 Add a license 可以選擇此專案的<strong>授權方式</strong>，關於各種專案的授權條款，可以參考這篇文章：<a href="https://noob.tw/open-source-licenses/" target="_blank" rel="noopener">常見的五個開源專案授權條款，使用軟體更自由</a>，設定好後按下 Create repository。</p><p><img src="/img/article/20200412/create-repository.jpg" srcset="/img/loading.gif" alt=""></p><p>創立成功後，畫面就會跳轉到你的新專案 GitHub 頁面了，恭喜你新增好了第一個專案！</p><p><img src="/img/article/20200412/hello-world.jpg" srcset="/img/loading.gif" alt=""></p><h2 id="開啟-SourceTree"><a href="#開啟-SourceTree" class="headerlink" title="開啟 SourceTree"></a>開啟 SourceTree</h2><p>第一個專案新增好後，請開啟剛剛安裝好的 SourceTree 並登入你的 GitHub 帳戶。若登入帳戶的提示沒有跳出，請按下右上角的齒輪，選擇第一個 Accounts（帳戶）。</p><p><img src="/img/article/20200412/step1.jpg" srcset="/img/loading.gif" alt=""></p><p>接著按下左下角的 Add（新增）</p><p><img src="/img/article/20200412/step2.jpg" srcset="/img/loading.gif" alt=""></p><p>依序輸入你的：</p><ol><li><strong>Host</strong>（專案託管、放置的位置，請選擇 GitHub）</li><li><strong>Auth Type</strong>（驗證類型，請選擇基本 Basic）</li><li><strong>Username</strong>（帳號）</li><li><strong>Password</strong>（密碼）</li><li><strong>Protocol</strong>（通訊協定，請選擇 HTTPS），關於 Protocol 的解釋可以參考<a href="https://www.ithome.com.tw/node/6349" target="_blank" rel="noopener">這篇文章</a></li></ol><p><img src="/img/article/20200412/step3.jpg" srcset="/img/loading.gif" alt=""></p><p>Save 完成後，就會出現你的 Github 帳戶了！</p><p><img src="/img/article/20200412/step4.jpg" srcset="/img/loading.gif" alt=""></p><h2 id="將專案加入-SourceTree-做版本控制"><a href="#將專案加入-SourceTree-做版本控制" class="headerlink" title="將專案加入 SourceTree 做版本控制"></a>將專案加入 SourceTree 做版本控制</h2><p>版本控制分為<strong>本機端（Local）</strong>與 <strong>遠端（Remote）</strong>。<br>本機端可以在離線的狀態下開發專案，等到連上網路之後再上傳到遠端更新。這也是做版本控制的好處之一，萬一網路掛掉了，還是可以繼續工作。</p><p>以下將分為 Local 端與 Remote 端兩個部分解說：</p><h3 id="Local-端的步驟"><a href="#Local-端的步驟" class="headerlink" title="Local 端的步驟"></a>Local 端的步驟</h3><p>首先在本機的開發環境中，新增一個專案，名稱與在 GitHub 上新增的專案一致。<br>筆者使用 VS Code，新增了一個 hello-world 的專案資料夾，裡面有 index.html 的檔案。</p><p><img src="/img/article/20200412/step6.jpg" srcset="/img/loading.gif" alt=""></p><p>接著將剛剛新增好的專案加入 SourceTree 做版本控制，請點選 New…，選擇 <strong>Add Existing Local Repository</strong>（加入現有的專案）。</p><p><img src="/img/article/20200412/step7.jpg" srcset="/img/loading.gif" alt=""></p><p>找到剛剛建立好的專案位置。</p><p><img src="/img/article/20200412/step8.jpg" srcset="/img/loading.gif" alt=""></p><p>加到本機端的 Git 版本控制，確認資料夾無誤後按下 Create。</p><p><img src="/img/article/20200412/step9.jpg" srcset="/img/loading.gif" alt=""></p><p>接著就可以看到你的專案新增到 Local 內了！<br>右方的 「<strong>master</strong>」 代表你的主要版本，前面灰色的數字表示還沒 <strong>Commit（提交）</strong>到版控的檔案數量。</p><p><img src="/img/article/20200412/step10.jpg" srcset="/img/loading.gif" alt=""></p><p>點進該專案可以看到下圖詳細的內容，左上角的 <strong>Commit</strong> 會提醒你還沒有提交到版本控制的檔案數。因為筆者只有一份 index.html 的檔案，所以會顯示 1。</p><p>這時候可以勾選要將哪些檔案加到版控之中，並且在下方輸入這次更動的註解或提醒。<br>完成後點選右下角的 <strong>Commit</strong>。</p><p><img src="/img/article/20200412/step11.jpg" srcset="/img/loading.gif" alt=""></p><p>成功把專案加到<strong>本機端</strong>的版本控制了！拍手！</p><p><img src="/img/article/20200412/step12.jpg" srcset="/img/loading.gif" alt=""></p><h3 id="Remote-端的步驟"><a href="#Remote-端的步驟" class="headerlink" title="Remote 端的步驟"></a>Remote 端的步驟</h3><p>完成了本機端的版控流程之後，接著要設定 <strong>Remote （遠端）</strong>的位置。<br>請到稍早在 Github 新增的專案頁面，按下 <strong>Clone or download</strong> 並複製該網頁的 <strong>URL</strong>。</p><p><img src="/img/article/20200412/step13.jpg" srcset="/img/loading.gif" alt=""></p><p>回到 SourceTree，在專案的右上角點選 <strong>Setting &gt; Remote</strong> 並按下 <strong>Add</strong>（新增）</p><p><img src="/img/article/20200412/step14.jpg" srcset="/img/loading.gif" alt=""></p><p><strong>Remote name</strong> 請輸入在 Github 新增專案的名稱（hello-world），並貼上 URL、選擇服務供應商（GitHub）和你的 Username，按下 OK。</p><p><img src="/img/article/20200412/step15.jpg" srcset="/img/loading.gif" alt=""></p><p>這樣就設定好你的專案<strong>遠端位置</strong>囉！（注意：檔案還沒有上傳到遠端！）</p><p>以上步驟是將你的 <strong>Local Repository（本機資料庫）關聯到 Remote Repository（遠端資料庫）</strong>，本機的檔案還沒有上傳到遠端，接著會繼續講解如何將本機檔案上傳遠端，再加把勁就完成了！</p><p><img src="/img/article/20200412/step16.png" srcset="/img/loading.gif" alt=""></p><h3 id="將-Local-端檔案更新到-Remote-端"><a href="#將-Local-端檔案更新到-Remote-端" class="headerlink" title="將 Local 端檔案更新到 Remote 端"></a>將 Local 端檔案更新到 Remote 端</h3><p>筆者在到達這一步時，發生了不可言喻的問題，待解決完畢之後，會再將文章補完！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>SourceTree</category>
+      
+      <category>Github</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>SourceTree</tag>
+      
+      <tag>Github</tag>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo Fluid 主題使用指南</title>
     <link href="/2020/02/25/hexo-theme-fluid/"/>
     <url>/2020/02/25/hexo-theme-fluid/</url>
